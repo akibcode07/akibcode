@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Profile</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0d0d14;
+    color:#f5f5f7;
+    min-height:100vh;
+}
+
+/* Main Container */
+.container{
+    width:100%;
+    max-width:700px;
+    margin:auto;
+    padding:55px 20px 40px;
+    text-align:center;
+}
+
+/* Profile */
+.profile{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.profile-img{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    padding:5px;
+
+    background:linear-gradient(
+        135deg,
+        #ff3040,
+        #ff0080,
+        #7b2cff,
+        #4169e1
+    );
+
+    margin-bottom:35px;
+}
+
+.profile-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #0d0d14;
+}
+
+h1{
+    font-size:52px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.username{
+    font-size:30px;
+    color:#9695a7;
+    margin-bottom:35px;
+}
+
+.bio{
+    max-width:620px;
+    margin:auto;
+    font-size:22px;
+    line-height:1.55;
+    color:#9d9cac;
+    margin-bottom:55px;
+}
+
+/* Social Cards */
+.links{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.link-card{
+    width:100%;
+    min-height:125px;
+
+    display:flex;
+    align-items:center;
+
+    padding:25px 30px;
+
+    background:#17171f;
+    border:1px solid #292934;
+    border-radius:28px;
+
+    text-decoration:none;
+    color:white;
+
+    transition:0.3s ease;
+}
+
+.link-card:hover{
+    transform:translateY(-4px);
+    background:#1d1d27;
+    border-color:#41414e;
+}
+
+/* Icon */
+.icon{
+    width:75px;
+    height:75px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:20px;
+
+    font-size:37px;
+    flex-shrink:0;
+}
+
+.instagram{
+    background:linear-gradient(
+        135deg,
+        #ff0055,
+        #ff0099,
+        #743cff
+    );
+}
+
+.youtube{
+    background:#450d1f;
+    color:#ff0033;
+}
+
+.linkedin{
+    background:#0b2948;
+    color:#0a9cff;
+}
+
+.github{
+    background:#303039;
+    color:#ffffff;
+}
+
+/* Text */
+.link-text{
+    text-align:left;
+    margin-left:28px;
+    flex:1;
+}
+
+.link-text h2{
+    font-size:29px;
+    margin-bottom:5px;
+}
+
+.link-text p{
+    color:#9998a8;
+    font-size:21px;
+}
+
+.arrow{
+    font-size:35px;
+    color:#92919f;
+}
+
+/* Footer */
+footer{
+    margin-top:45px;
+    color:#666573;
+    font-size:15px;
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+    .container{
+        padding:45px 18px 30px;
+    }
+
+    .profile-img{
+        width:170px;
+        height:170px;
+        margin-bottom:35px;
+    }
+
+    h1{
+        font-size:40px;
+    }
+
+    .username{
+        font-size:25px;
+        margin-bottom:30px;
+    }
+
+    .bio{
+        font-size:19px;
+        line-height:1.55;
+        margin-bottom:45px;
+    }
+
+    .links{
+        gap:18px;
+    }
+
+    .link-card{
+        min-height:110px;
+        padding:20px;
+        border-radius:25px;
+    }
+
+    .icon{
+        width:68px;
+        height:68px;
+        font-size:32px;
+        border-radius:18px;
+    }
+
+    .link-text{
+        margin-left:20px;
+    }
+
+    .link-text h2{
+        font-size:25px;
+    }
+
+    .link-text p{
+        font-size:17px;
+    }
+
+    .arrow{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Profile -->
+    <div class="profile">
+
+        <div class="profile-img">
+            <img src="/storage/emulated/0/Pictures/Background Eraser/BackgroundEraser_20260823_141619479.jpg" alt="Profile">
+        </div>
+
+        <h1>Akib</h1>
+
+        <div class="username">
+            @akibcodes
+        </div>
+
+        <p class="bio">
+            BSc Computer Science Student & Web Developer —
+            building websites, learning new technologies
+            and sharing my coding journey.
+        </p>
+
+    </div>
+
+
+    <!-- Social Links -->
+    <div class="links">
+
+        <a href="https://instagram.com/akibcodes" 
+           class="link-card" 
+           target="_blank">
+
+            <div class="icon instagram">
+                🅾
+            </div>
+
+            <div class="link-text">
+                <h2>Instagram</h2>
+                <p>Tech Content</p>
+            </div>
+
+            <div class="arrow">›</div>
+
+        </a>
+
+
+        <a href="https://youtube.com/@akibcode07" 
+           class="link-card" 
+           target="_blank">
+
+            <div class="icon youtube">
+                ▶
+            </div>
+
+            <div class="link-text">
+                <h2>YouTube</h2>
+                <p>Detailed tutorials & Courses</p>
+            </div>
+
+            <div class="arrow">›</div>
+
+        </a>
+
+
+
+
+
+
+    </div>
+
+
+    <footer>
+        © 2026 Akib. All rights reserved.
+    </footer>
+
+</div>
+
+</body>
+</html>
