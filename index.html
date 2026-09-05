@@ -1221,6 +1221,157 @@ footer{
    END OF CSS
 ========================= */
 
+
+
+
+
+
+/* =========================
+   AKIB PROFESSIONAL LOADER
+========================= */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+
+    background:
+        radial-gradient(circle at center, #202020 0%, #0b0b0b 45%, #000000 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition: opacity 0.7s ease,
+                visibility 0.7s ease;
+}
+
+#loader.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+/* AKIB */
+.loader-content h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 48px;
+    font-weight: 800;
+
+    letter-spacing: 7px;
+
+    animation: akibShow 1s ease;
+}
+
+/* Website Developer */
+.loader-content p {
+    margin: 8px 0 28px;
+
+    color: #bdbdbd;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    letter-spacing: 3px;
+
+    animation: developerShow 1.3s ease;
+}
+
+/* Spinner */
+.loader-spinner {
+    width: 42px;
+    height: 42px;
+
+    margin: auto;
+
+    border: 4px solid rgba(255,255,255,0.15);
+    border-top: 4px solid #ffffff;
+
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+}
+
+/* Loading */
+.loader-content span {
+    display: block;
+
+    margin-top: 14px;
+
+    color: #999999;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+/* AKIB Animation */
+@keyframes akibShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+        letter-spacing: 15px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 7px;
+    }
+}
+
+
+/* Developer Animation */
+@keyframes developerShow {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Spinner Animation */
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+   
+
 </style>
 
 </head>
@@ -1228,6 +1379,30 @@ footer{
 
 <body>
 
+
+
+
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+    <div class="loader-content">
+        <h1>AKIB</h1>
+        <p>Website Developer</p>
+
+        <div class="loader-spinner"></div>
+
+        <span>Loading...</span>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+   
 
 <!-- =========================
      NAVBAR
@@ -2376,6 +2551,30 @@ document
 
   });
 
+
+
+
+
+   
+setTimeout(function() {
+
+    const loader = document.getElementById("loader");
+
+    loader.classList.add("hide");
+
+}, 1500);
+
+   
+
+
+
+
+
+
+
+
+
+   
 </script>
 
 
